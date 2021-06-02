@@ -36,20 +36,20 @@ function articleMaker({ title, date, firstParagraph, secondParagraph, thirdParag
    <span class="expandButton">+</span>
  </div>*/
 
-  article.classList.add("article");
-  article.classList.add("date");
-  article.classList.add("expandButton");
-  exButton.classList.add("article-open", "article-close")
+ article.classList.add("article");
+ // article.classList.add("date");
+  exButton.classList.add("expandButton");
+ 
 
   articleTitle.textContent = title;
   articleDate.textContent = date;
   articleFirst.textContent = firstParagraph;
   articleSecond.textContent = secondParagraph;
   articleThird.textContent = thirdParagraph;
+  exButton.textContent = "extend";
 
   exButton.addEventListener("click", (event) => {
     article.classList.toggle("article-open");
-    article.classList.toggle("article-close");
   });
   return article;
 }
